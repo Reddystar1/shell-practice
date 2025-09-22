@@ -2,5 +2,9 @@
 
 NUMBER1=100
 NUMBER2=200
-SUM=$(($NUMBER1+$NUMBER2))
+NAME=Devops
+SUM=$(($NUMBER1+$NUMBER2+$NAME))
 echo "SUM is: ${SUM}"
+
+LEADERS=("mamatha" "keerthi")
+echo "all leaders: ${LEADERS}[@]" 
