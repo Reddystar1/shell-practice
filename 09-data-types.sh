@@ -6,5 +6,7 @@ NAME=Devops
 SUM=$(($NUMBER1+$NUMBER2+$NAME))
 echo "SUM is: ${SUM}"
 
-LEADERS=("mamatha" "keerthi")
-echo "all leaders: ${LEADERS}[@]" 
+LEADERS=("mamatha" "keerthi" "chitti")
+echo "All Leaders: ${LEADERS[@]}" 
+echo "First Leader: ${LEADER[0]}"
+echo "Last Leader: ${LEADER[1]}"
