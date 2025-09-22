@@ -1,7 +1,11 @@
 #!/bin/bash
 
+
+#changins
+A=apple
+B=bat
 #covversation
-echo "ramesh:: hii suresh"
-echo "suresh:: hii ramesh"
-echo "ramesh:: how are you? suresh"
-echo "suresh:: am fine, ramesh."
+echo "$A:: hii B"
+echo "$B:: hii A"
+echo "$A:: how are you? B"
+echo "$B:: am fine, A."
