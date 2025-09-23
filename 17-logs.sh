@@ -1,5 +1,5 @@
 #!/bin/bash
-USERID-$(id -u)
+USERID=$(id -u)
 R="\e[31m]"
 G="\e[32m]"
 Y="\e[33m]"
@@ -9,7 +9,7 @@ C="\e[36m]"
 W="\e[37m]"
 
 LOGS_FOLDER="/var/log/shell-script"
-LOGS_FILE=4(echo $0 | cut -d "." -f1)
+LOGS_FILE=(echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 mkdir -p $LOGS_FOLDER
 echo "script stsrted executed at :$(date)"
