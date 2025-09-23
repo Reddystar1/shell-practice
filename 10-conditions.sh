@@ -2,9 +2,9 @@
 
 NUMBER=$1
 
-if [$NUMBER -lt 10]; then
+if [ $NUMBER -lt 10 ]; then
     echo "Given number $NUMBER is less then 10"
-    else if [$NUMBER -wq 10]; then
+    else if [ $NUMBER -eq 10 ]; then
     echo "Given number $NUMBER is equal to 10"
 else
     echo "Given number $NUMBER is greter then or equal 10"
