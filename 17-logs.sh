@@ -9,12 +9,12 @@ C="\e[36m]"
 W="\e[37m]"
 
 LOGS_FOLDER="/var/log/shell-script"
-LOGS_FILE=(echo $0 | cut -d "." -f1)
+SCRIPT_NAME=$( echo $0 | cut -d "." -f1 )
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 mkdir -p $LOGS_FOLDER
 echo "script stsrted executed at :$(date)"
 
-if [$USERID -ne 0 ]; then
+if [ $USERID -ne 0 ]; then
     echo "ERROR:: please run the script"
     exit 1 #failure other then 0
 fi
@@ -28,7 +28,7 @@ VALIDATE(){ # functions receive inputs through args just like shell script args
     fi
 }
 
-dnf list installed mysql &>>$LOG_FILE
+dnf installed mysql &>>$LOG_FILE
 # Install if it is not found
 if [ $? -ne 0 ]; then
     dnf install mysql -y &>>$LOG_FILE
